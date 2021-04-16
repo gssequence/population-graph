@@ -1,0 +1,56 @@
+{
+  "name": "population-graph",
+  "version": "1.0.0",
+  "description": "Population graph by prefecture",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint 'src/**/*.{ts,tsx}' && tsc --noEmit",
+    "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}' && tsc --noEmit",
+    "prepare": "husky install",
+    "start": "next start",
+    "stylelint": "stylelint 'src/**/*.scss'",
+    "stylelint:fix": "stylelint --fix 'src/**/*.scss'"
+  },
+  "keywords": [],
+  "author": "livewing.net <dev@livewing.net> (https://livewing.net/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gssequence/population-graph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gssequence/population-graph/issues"
+  },
+  "private": true,
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix",
+    "*.scss": "stylelint --fix"
+  },
+  "dependencies": {
+    "next": "^10.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.19.0",
+    "typescript": "^4.2.4"
+  }
+}
