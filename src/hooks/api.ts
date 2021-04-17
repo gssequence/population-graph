@@ -12,12 +12,14 @@ export const fetcher = <T>(...args: Parameters<typeof fetch>): Promise<T> =>
 /**
  * API ルートからデータを取得する React Hooks 関数。
  * @param path API のパス。
+ * @param shouldFetch データを取得するかどうかを示す boolean 値。
  * @returns 取得の状態を表す `SWRState` オブジェクト。
  */
 export const useAPI = <T = JSONType, E = unknown>(
-  path: string
+  path: string,
+  shouldFetch = true
 ): SWRState<T, E> => {
-  const { data, error } = useSWR<T>(path, fetcher);
+  const { data, error } = useSWR<T>(shouldFetch ? path : null, fetcher);
 
   if (!error && !data) {
     return { state: 'loading' };
