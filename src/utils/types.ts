@@ -5,3 +5,19 @@ export type JSONType =
   | null
   | JSONType[]
   | { [key: string]: JSONType };
+
+interface SWRLoading {
+  state: 'loading';
+}
+interface SWRDone<T = JSONType> {
+  state: 'done';
+  data: T;
+}
+interface SWRError<E = unknown> {
+  state: 'error';
+  error: E;
+}
+export type SWRState<T = JSONType, E = unknown> =
+  | SWRLoading
+  | SWRDone<T>
+  | SWRError<E>;
