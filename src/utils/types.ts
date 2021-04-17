@@ -21,3 +21,11 @@ export type SWRState<T = JSONType, E = unknown> =
   | SWRLoading
   | SWRDone<T>
   | SWRError<E>;
+
+export interface PrefecturesResponse {
+  message: null;
+  result: {
+    prefCode: number;
+    prefName: string;
+  }[];
+}
