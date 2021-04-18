@@ -55,7 +55,10 @@ export const PopulationGraph: VFC<PopulationGraphProps> = ({ data }) => {
     }, []);
 
   return (
-    <ResponsiveContainer width="100%" aspect={16 / 9}>
+    // ResponsiveContainer の width を 100% にするとレイアウトが再計算されない場合がある
+    // width を 99% にすることで再計算するようになる
+    // 参照: https://github.com/recharts/recharts/issues/1423#issuecomment-411098968
+    <ResponsiveContainer width="99%" aspect={16 / 9}>
       <LineChart data={chartData}>
         <XAxis dataKey="year" height={40} tick={chartData.length !== 0}>
           <Label value="年度" offset={0} position="insideBottomRight" />
