@@ -4,7 +4,7 @@ const apiBaseAddress = 'https://opendata.resas-portal.go.jp';
 const apiKey = process.env.RESAS_API_KEY;
 
 if (typeof apiKey !== 'string' || apiKey.length === 0) {
-  console.warn('環境変数 RESAS_API_KEY が設定されていません。');
+  throw new Error('環境変数 RESAS_API_KEY が設定されていません。');
 }
 
 /**
@@ -46,6 +46,7 @@ export const get = async (
     }
     if (
       typeof json === 'object' &&
+      json !== null &&
       'statusCode' in json &&
       typeof json.statusCode === 'string'
     ) {

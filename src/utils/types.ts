@@ -15,7 +15,7 @@ interface SWRDone<T = JSONType> {
 }
 interface SWRError<E = unknown> {
   state: 'error';
-  error: E;
+  error: E | undefined;
 }
 export type SWRState<T = JSONType, E = unknown> =
   | SWRLoading

@@ -19,15 +19,15 @@ export const useAPI = <T = JSONType, E = unknown>(
   path: string,
   shouldFetch = true
 ): SWRState<T, E> => {
-  const { data, error } = useSWR<T>(shouldFetch ? path : null, fetcher);
+  const { data, error } = useSWR<T, E>(shouldFetch ? path : null, fetcher);
 
   if (!error && !data) {
     return { state: 'loading' };
   }
 
-  if (error) {
+  if (error || typeof data === 'undefined') {
     return { state: 'error', error };
   }
 
-  return { state: 'done', data };
+  return { state: 'done', data: data };
 };
