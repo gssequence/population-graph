@@ -20,6 +20,10 @@
   flex-wrap: wrap;
 }
 
-.itemContainer:not(:last-child) {
-  margin-right: 1rem;
+.itemContainer {
+  margin: 0.4rem 0;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
 }
