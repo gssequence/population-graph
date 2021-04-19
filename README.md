@@ -1,5 +1,8 @@
 # population-graph
 
+[![CI](https://github.com/gssequence/population-graph/workflows/CI/badge.svg)](https://github.com/gssequence/population-graph/actions?query=workflow%3ACI)
+[![LICENSE](https://img.shields.io/github/license/gssequence/population-graph)](./LICENSE)
+
 <img width="1680" alt="Screenshot" src="https://user-images.githubusercontent.com/7447366/115166634-24cd6300-a0ef-11eb-9bdd-e7d2c8a97849.png">
 
 都道府県別の総人口推移グラフを表示する Next.js アプリケーションです。都道府県のチェックボックスをオンにすると、その都道府県の人口推移グラフを Recharts を用いて表示します。
