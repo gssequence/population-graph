@@ -1,7 +1,7 @@
 # population-graph
 
-[![CI](https://github.com/gssequence/population-graph/workflows/CI/badge.svg)](https://github.com/gssequence/population-graph/actions?query=workflow%3ACI)
-[![LICENSE](https://img.shields.io/github/license/gssequence/population-graph)](./LICENSE)
+[![CI](https://github.com/livewing/population-graph/workflows/CI/badge.svg)](https://github.com/livewing/population-graph/actions?query=workflow%3ACI)
+[![LICENSE](https://img.shields.io/github/license/livewing/population-graph)](./LICENSE)
 
 <img width="1680" alt="Screenshot" src="https://user-images.githubusercontent.com/7447366/115166634-24cd6300-a0ef-11eb-9bdd-e7d2c8a97849.png">
 
@@ -20,7 +20,7 @@ Node.js と npm がインストールされている必要があります。
 最初に clone と依存関係のインストールを行います。
 
 ```bash
-$ git clone https://github.com/gssequence/population-graph.git
+$ git clone https://github.com/livewing/population-graph.git
 $ cd population-graph
 $ npm i
 ```

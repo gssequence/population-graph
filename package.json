@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gssequence/population-graph.git"
+    "url": "https://github.com/livewing/population-graph.git"
   },
   "bugs": {
-    "url": "https://github.com/gssequence/population-graph/issues"
+    "url": "https://github.com/livewing/population-graph/issues"
   },
   "private": true,
   "lint-staged": {
