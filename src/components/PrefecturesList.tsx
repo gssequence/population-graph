@@ -28,30 +28,28 @@ interface PrefecturesListProps {
  * @param action `PrefecturePopulation` コンポーネントが発行する `PrefecturePopulationState` 。
  * @returns 新しい状態。
  */
-const reducer: React.Reducer<
-  PrefecturesListState,
-  PrefecturePopulationState
-> = (state, action) => {
-  const { prefCode, prefName, population } = action;
+const reducer: React.Reducer<PrefecturesListState, PrefecturePopulationState> =
+  (state, action) => {
+    const { prefCode, prefName, population } = action;
 
-  // 以前の状態から既存の人口構成データを削除
-  const filtered = state.filter(item => item.prefCode !== prefCode);
+    // 以前の状態から既存の人口構成データを削除
+    const filtered = state.filter(item => item.prefCode !== prefCode);
 
-  if (typeof population === 'undefined') {
-    // チェックボックスがオフになった場合、そのまま新しい状態として返す
-    return filtered;
-  } else {
-    // チェックボックスがオンになった場合、新しい人口構成データを追加して返す
-    return [
-      ...filtered,
-      {
-        prefCode,
-        prefName,
-        population
-      }
-    ].sort((a, b) => a.prefCode - b.prefCode);
-  }
-};
+    if (typeof population === 'undefined') {
+      // チェックボックスがオフになった場合、そのまま新しい状態として返す
+      return filtered;
+    } else {
+      // チェックボックスがオンになった場合、新しい人口構成データを追加して返す
+      return [
+        ...filtered,
+        {
+          prefCode,
+          prefName,
+          population
+        }
+      ].sort((a, b) => a.prefCode - b.prefCode);
+    }
+  };
 
 /**
  * 都道府県一覧のチェックボックスを生成し、チェックボックスがオンの都道府県の
