@@ -28,7 +28,7 @@
     "*.scss": "stylelint --fix"
   },
   "dependencies": {
-    "next": "^11.0.1",
+    "next": "^12.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "recharts": "^2.0.10",
